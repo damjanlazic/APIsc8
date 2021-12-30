@@ -9,7 +9,7 @@ from resources.user import UserDelete, UserRegister
 from resources.items import Item, ItemList
 from resources.store import Store, StoreList
 from datetime import timedelta
-from db import db
+
 
 
 app = Flask(__name__)
@@ -44,8 +44,10 @@ api.add_resource(UserRegister, "/register") # http:/127.0.0.1:5000/register
 api.add_resource(UserDelete, "/userdelete/<string:username>") # http:/127.0.0.1:5000/userdelete/username
 api.add_resource(StoreList, "/stores")
 
-db.init_app(app)
+
 if __name__ == "__main__":
+    from db import db
+    db.init_app(app)
     
     if app.config["DEBUG"]:
         @app.before_first_request
