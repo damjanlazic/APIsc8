@@ -11,4 +11,4 @@ Add/Delete/View Store (via post, delete, get methods)
 Add/Delete/Change/View Items (via post, put, delete, get methods)
 (by changing the items' store_id items can be transfered between stores)
 
-Deployed on Heroku.
+Previously deployed on Heroku.
